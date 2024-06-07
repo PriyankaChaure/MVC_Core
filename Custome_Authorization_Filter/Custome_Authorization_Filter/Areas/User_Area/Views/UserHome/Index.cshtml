@@ -1,0 +1,19 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h2> Hi! Welcome @Context.Session.GetString("UserName")
+    </h2>
+    <h3>User_area User_Home Controller Index Action Called!!</h3>
+    <a asp-action="Logout" asp-controller="home" asp-area="">LogOut</a>
+</body>
+</html>

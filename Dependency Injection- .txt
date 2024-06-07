@@ -1,0 +1,9 @@
+Dependency Injection:- 
+ is codding pattern which enables us to create 
+
+ASP.NET Core Recommends you use model with repo + di
+Repository Design Pattern
+ - instaed of writing data accesss code directly inside a controller write it in seperate class called repository and use it across multiple controllers. 
+ ==> reuse data access code
+
+HomeController hc=new HomeController();

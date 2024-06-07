@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div style="background-color:greenyellow;color:mediumvioletred">
+        Welcome To Ri-Tech
+    </div>
+    <div style="background-color:navy;color:white">
+        <a href="/Home/Home">Home</a>
+        <a href="/Home/About">About</a>
+        <a href="/Home/contact">Contact</a>
+    </div>
+    <div style="background-color:indianred;color:ivory">
+        @RenderSection("news",false)
+    </div>
+    <div style="background-color:mediumvioletred;color:white">
+        @RenderBody()
+    </div>
+    <div style="background-color:indigo;color:white">
+        &copy; All rights reserverd to Ri-Tech!
+    </div>
+</body>
+</html>

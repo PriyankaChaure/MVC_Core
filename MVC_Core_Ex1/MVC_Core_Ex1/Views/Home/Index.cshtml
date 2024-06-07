@@ -1,0 +1,71 @@
+﻿ @model IEnumerable<MVC_Core_Ex1.ViewModels.FlightVM>
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table" border="1">
+    <thead>
+        <tr>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.FightNo)
+            </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fair)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TravelTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SourceCity)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DestinationCity)
+            </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FacilityName)
+                </th>
+           
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FightNo)
+            </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Fair)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TravelTime)
+                    </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CityName)
+            </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CityName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FacilityName)
+          
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>
+ 

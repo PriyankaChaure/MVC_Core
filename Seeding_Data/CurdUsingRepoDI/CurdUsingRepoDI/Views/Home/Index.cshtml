@@ -1,0 +1,124 @@
+﻿@model IEnumerable<CurdUsingRepoDI.Models.Emp>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+@* <form asp-action="Search" method="get">
+    <select name="DeptId" asp-items="@ViewBag.DeptId"> </select>
+    <input type="submit" value="serach"/>
+        <input type="submit" value="Ascending By Name" />
+</form> *@
+ 
+
+<table class="table"border="1">
+    <thead>
+        <tr>
+            <th>
+                    <form asp-action="Search" method="get">
+                        <select name="DeptId" asp-items="@ViewBag.DeptId"> </select>
+                        <input type="submit" value="search" />
+                       
+                    </form>
+            </th>
+            <th>
+                    <form asp-action="SearchbyAscending" method="get">
+                      
+                        <input type="submit" value="Ascending By Name" name="Asc"/>
+                    </form>
+                   
+            </th>
+            <th>
+                    <form asp-action="SearchbyDescending" method="get">
+                       
+                        <input type="submit" value="Descending By Name" name="Dsc" />
+                    </form>
+            </th>
+        </tr>
+       
+        <tr >
+            <th>
+                <form asp-action="searchByProperty" method="get">
+                    <select name="prop">
+                        <option value="EmpName">EmpName</option>
+                        <option value="EmpSalary">Empsalary</option>
+                        <option value="DeptName">DeptName</option>
+                    </select>
+                        <select name="sort">
+                            <option value="1">Ascending</option>
+                            <option value="2">Descending</option>
+                        </select>
+                        <input type="submit" value="Sort" name="search" />
+
+                </form>
+                   
+               
+            </th>
+        </tr>
+        <tr>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.EmpName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpEmailId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpMobileNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dept.DeptName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpEmailId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpMobileNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpSalary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dept.DeptName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.EmpId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.EmpId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.EmpId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

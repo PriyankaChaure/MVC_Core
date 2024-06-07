@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Reposiratory.Models.Employee>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h2>Employee List</h2>
+    <div>@Html.ActionLink("Create New Employee","Create","Home")</div>
+    <table border="1">
+        <tr>
+            <td colspan="3">
+                @using (Html.BeginForm("searchbyname", "Home", FormMethod.Post))
+                {
+                    @:Name:
+                    <input type="text" name="EmpName" />
+                    <input type="submit" value="search" />
+                }
+            </td>
+        </tr>
+            <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(p=>p.EmpId)</th>
+                <th>@Html.DisplayNameFor(p => p.EmpName)</th>
+                <th>@Html.DisplayNameFor(p => p.EmpAddress)</th>
+                <th>@Html.DisplayNameFor(p => p.EmpEmailid)</th>
+                <th>@Html.DisplayNameFor(p => p.EmpDept)</th>
+                <th>@Html.DisplayNameFor(p => p.EmpMobileNo)</th>
+                <th>@Html.DisplayNameFor(p => p.EmpSalary)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var temp in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(p => temp.EmpId)</td>
+                    <td>@Html.DisplayFor(p => temp.EmpName)</td>
+                    <td>@Html.DisplayFor(p => temp.EmpAddress)</td>
+                    <td>@Html.DisplayFor(p => temp.EmpEmailid)</td>
+                    <td>@Html.DisplayFor(p => temp.EmpDept)</td>
+                    <td>@Html.DisplayFor(p => temp.EmpMobileNo)</td>
+                    <td>@Html.DisplayFor(p => temp.EmpSalary)</td>
+                    <td>@Html.ActionLink("Edit","Edit","Home",new{id=temp.EmpId})</td>
+                    <td>@Html.ActionLink("Delete", "Delete", "Home", new { id = temp.EmpId })</td>
+                    <td>@Html.ActionLink("Details", "Details", "Home", new { id = temp.EmpId })</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

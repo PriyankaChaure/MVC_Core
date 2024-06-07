@@ -1,0 +1,52 @@
+﻿@model IEnumerable<assignment_pc.Models.exampleVM>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <table border="1">
+            <thead>
+                <tr>
+                    <td colspan="4">
+                        @using (Html.BeginForm("SearchByArea", "Home", FormMethod.Post))
+                        {
+                            @:Select Dept:
+                            @Html.DropDownList("AreaId", "Select Area")
+                            <input type="submit" value="Search" />
+                        }
+                </td>
+            </tr>
+                <tr>
+                    @*<th>@Html.DisplayNameFor(p => p.CustomerId)</th>*@
+
+                    <th>@Html.DisplayNameFor(p => p.CustomerName)</th>
+                    <th>@Html.DisplayNameFor(p => p.TotalBillAmount)</th>
+                    <th>@Html.DisplayNameFor(p => p.TotalPaidAmount)</th>
+                    <th>@Html.DisplayNameFor(p => p.BalanceAmount)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var temp in Model)
+                {
+                <tr>
+                    @*<td>@Html.DisplayFor(p => temp.CustomerId)</td>*@
+
+                    <td>@Html.DisplayFor(p => temp.CustomerName)</td>
+                    <td>@Html.DisplayFor(p => temp.TotalBillAmount)</td>
+                    <td>@Html.DisplayFor(p => temp.TotalPaidAmount)</td>
+                    <td>@Html.DisplayFor(p => temp.BalanceAmount)</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

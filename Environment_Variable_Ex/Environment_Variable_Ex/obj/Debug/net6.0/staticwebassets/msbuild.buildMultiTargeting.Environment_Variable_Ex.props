@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Environment_Variable_Ex.props" />
+</Project>

@@ -1,0 +1,47 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Custome_Authorization_Filter
+build_property.RootNamespace = Custome_Authorization_Filter
+build_property.ProjectDir = C:\Ankit\MVC_Core\Custome_Authorization_Filter\Custome_Authorization_Filter\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Ankit\MVC_Core\Custome_Authorization_Filter\Custome_Authorization_Filter
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Ankit/MVC_Core/Custome_Authorization_Filter/Custome_Authorization_Filter/Areas/User_Area/Views/UserHome/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlcl9BcmVhXFZpZXdzXFVzZXJIb21lXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Ankit/MVC_Core/Custome_Authorization_Filter/Custome_Authorization_Filter/Areas/User_Area/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlcl9BcmVhXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Ankit/MVC_Core/Custome_Authorization_Filter/Custome_Authorization_Filter/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Ankit/MVC_Core/Custome_Authorization_Filter/Custome_Authorization_Filter/Views/Home/LogOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dPdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Ankit/MVC_Core/Custome_Authorization_Filter/Custome_Authorization_Filter/Views/Home/SignIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaWduSW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Ankit/MVC_Core/Custome_Authorization_Filter/Custome_Authorization_Filter/Views/Home/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaWduVXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Ankit/MVC_Core/Custome_Authorization_Filter/Custome_Authorization_Filter/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 

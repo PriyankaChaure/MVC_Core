@@ -1,0 +1,40 @@
+Native Drivers => ODBC => DAO => ADODC=>ADO=>ADO.NET (ODA)=>LINQ=>EntityFramework=>Data Services
+
+.NET Core => Entity Core
+
+1. create model classes and define relationsips
+1.1 override conventions usign data annotation attributes. 
+2. Create context class inherits from DbContext
+3. Connection string
+    "server=servername;database=databasename;Trusted_Connection=True;"
+"server=servername;database=databasenaem;user id=userid;password=password";
+
+4. Register context class to IOC
+5. When ever you want to use it, inject it and use it. 
+
+Tools
+
+Migrations 
+Add-Migration 'Name'
+Remove-Migration 
+Update-Database
+
+
+If you want to read any setting from appsetttings then we use a built in service called IConfiguration. 
+
+VAlidations we have -
+
+asp-validation-for:to display validation error for individual model property. 
+
+asp-validation-summary: to display all errors togeather or only erros those do not belong to model property. 
+
+jquery
+jquery-validate
+jqurey-validate-unobstrasive
+
+.Net Core
+ >> Nuget => Installed .net packages. 
+
+ >> Libman :- package manager to install client side packages.
+
+

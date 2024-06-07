@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<usedefaultfiles.Models.Customer>
+
+<html>
+<head>
+    <title>Customers list</title>
+</head>
+<body>
+    <h2>Customers Lists</h2>
+    <table>
+        <tr>
+            <td>@Html.DisplayNameFor(p => p.customerid)</td>
+            <td>@Html.DisplayNameFor(p => p.customername)</td>
+            <td>@Html.DisplayNameFor(p => p.customeraddress)</td>
+            <td>@Html.DisplayNameFor(p => p.customeremailid)</td>
+            <td>@Html.DisplayNameFor(p => p.customermobileno)</td>
+            <td>@Html.DisplayNameFor(p => p.customercreditlimit)</td>
+        </tr>
+        @foreach (var temp in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(p => temp.customerid)</td>
+                <td>@Html.DisplayFor(p => temp.customername)</td>
+                <td>@Html.DisplayFor(p => temp.customeraddress)</td>
+                <td>@Html.DisplayFor(p => temp.customeremailid)</td>
+                <td>@Html.DisplayFor(p => temp.customermobileno)</td>
+                <td>@Html.DisplayFor(p => temp.customercreditlimit)</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

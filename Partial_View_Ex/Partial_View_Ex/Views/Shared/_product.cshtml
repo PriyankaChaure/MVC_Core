@@ -1,0 +1,26 @@
+﻿@model Partial_View_Ex.Models.Product
+<html>
+    <head>
+        <title>Product List</title>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <td> <label asp-for="ProductId"></label> </td>
+                <td> @Model.ProductId</td>
+            </tr>
+            <tr>
+                <td><label asp-for="ProductName"></label></td>
+                <td>@Model.ProductName</td>
+            </tr>
+            <tr>
+                <td><label asp-for="MfgName"></label></td>
+                <td>@Model.MfgName</td>
+            </tr>
+            <tr>
+                <td><label asp-for="Price"></label></td>
+                <td>@Model.Price</td>
+            </tr>
+        </table>
+    </body>
+</html>

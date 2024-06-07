@@ -1,0 +1,68 @@
+﻿@model CurdUsingRepoDI.Models.Emp
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+    <script src="~/jquery/jquery.js"></script>
+    <script src="~/jquery-validate/jquery.validate.js"></script>
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+</head>
+<body>
+
+<h4>Emp</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="EmpId" />
+            <div class="form-group">
+                <label asp-for="EmpName" class="control-label"></label>
+                <input asp-for="EmpName" class="form-control" />
+                <span asp-validation-for="EmpName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmpAddress" class="control-label"></label>
+                <input asp-for="EmpAddress" class="form-control" />
+                <span asp-validation-for="EmpAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmpEmailId" class="control-label"></label>
+                <input asp-for="EmpEmailId" class="form-control" />
+                <span asp-validation-for="EmpEmailId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmpMobileNo" class="control-label"></label>
+                <input asp-for="EmpMobileNo" class="form-control" />
+                <span asp-validation-for="EmpMobileNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmpSalary" class="control-label"></label>
+                <input asp-for="EmpSalary" class="form-control" />
+                <span asp-validation-for="EmpSalary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dept.DeptName" class="control-label"></label>
+                <select asp-for="DeptId" class="form-control" asp-items="ViewBag.DeptId"></select>
+                <span asp-validation-for="DeptId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+</body>
+</html>

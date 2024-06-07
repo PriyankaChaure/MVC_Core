@@ -1,0 +1,89 @@
+﻿@model IEnumerable<Product>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/bootstrapfiles/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="~/bootstrapfiles/bootstrap/js/bootstrap.js"></script>
+    <link href="~/bootstrapfiles/bootstrap/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <span>Index</span>
+<p>
+    <a class="btn btn-outline-primary" asp-action="Create">Create New</a>
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td colspan="3">
+                <form asp-action="searchbyproductname" asp-controller="Home" method="post">
+                Search By Product Name:
+                <input type="text" name="proname"/>
+                <input class="btn btn-outline-primary" type="submit" value="search"/>
+                </form>
+            </td>
+            <td colspan="3">
+                <form asp-action="searchbycategory" asp-asp-controller="Home" method="post">
+                    Select Category:
+                 <select name="catid" asp-items="@ViewBag.Categories">
+                     <option>Select Category</option>
+                 </select>
+                    <input class="btn btn-outline-primary" type="submit" value="search"/>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Productname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MfgName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Productname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MfgName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.CategoryName)
+            </td>
+            <td>
+                <a class="btn btn-outline-success" asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
+                <a class="btn btn-outline-warning" asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
+                <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>
+</div>
+</div>
+</body>
+</html>

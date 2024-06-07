@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h3>Index Action of Home Controller Called!!</h3>
+    <h3>Call sampleVC using await</h3>
+    @await Component.InvokeAsync("SampleVC")
+    <h3>Call sampleVC using taghelper</h3>
+    <vc:sample-vc></vc:sample-vc>
+    <hr />
+    <h3>Product Information</h3>
+    <h5>Using await</h5>
+    @await Component.InvokeAsync("ProductVC")
+    <h5>Using taghelper</h5>
+    <vc:product-vc></vc:product-vc>
+    <hr />
+    <h3>Book Information</h3>
+    <h5>Using Await</h5>
+    @await Component.InvokeAsync("BookVC")
+    <h5>Using Taghelpers</h5>
+    <vc:book-vc></vc:book-vc>
+    <hr />
+    <h3>Customer Information</h3>
+    <h5>Using Await</h5>
+    @await Component.InvokeAsync("CustomerVC",new{crl=(decimal)60000})
+    <h5>Using Taghelpers</h5>
+    <vc:customer-vc crl="50000"></vc:customer-vc>
+</body>
+</html>

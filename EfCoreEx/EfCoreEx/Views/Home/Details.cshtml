@@ -1,0 +1,52 @@
+﻿@model Product
+<html>
+<head>
+    <title>Create form</title>
+    <script src="~/bootstrapfiles/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="~/bootstrapfiles/bootstrap/js/bootstrap.js"></script>
+    <link href="~/bootstrapfiles/bootstrap/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <h2>
+        Details Of Product
+    </h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+    <form class="form-check" asp-action="Details" asp-controller="Home" method="post">
+        <div>
+            <label asp-for="Productname"></label>
+            <div>
+                <input asp-for="Productname" />
+            </div>
+        </div>
+        <div>
+            <label asp-for="MfgName"></label>
+            <div>
+                <input asp-for="MfgName" />
+            </div>
+        </div>
+        <div>
+            <label asp-for="Price"></label>
+            <div>
+                <input asp-for="Price" />
+            </div>
+        </div>
+        <div>
+            <label asp-for="Category"></label>
+            <div>
+                <select asp-for="CategoryId" asp-items="@ViewBag.categories">
+                    <option>Select category</option>
+                </select>
+            </div>
+        </div>
+        <div>
+          @Html.ActionLink("Back To List","Index",new{ } ,htmlAttributes:new{@class="btn btn-outline-primary"})|
+          @Html.ActionLink("Edit", "Edit",new{id=Model.ProductId},htmlAttributes:new{@class="btn btn-outline-success"})
+        </div>
+    </form>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

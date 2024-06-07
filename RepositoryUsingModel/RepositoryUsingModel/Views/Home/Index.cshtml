@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Customer>
+<h1>Home Controller Of index Action called!</h1>
+<p>this paragraph used to demo!!!</p>
+<div>
+    @Html.ActionLink("Create New","Create","Home")
+    <table border="1">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(p=>p.customerid)</th>
+                <th>@Html.DisplayNameFor(p => p.customername)</th>
+                <th>@Html.DisplayNameFor(p => p.customeraddress)</th>
+                <th>@Html.DisplayNameFor(p => p.customeremailid)</th>
+                <th>@Html.DisplayNameFor(p => p.customerphone)</th>
+                <th>@Html.DisplayNameFor(p => p.customercreditlimit)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var temp in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(p => temp.customerid)</td>
+                    <td>@Html.DisplayFor(p => temp.customername)</td>
+                    <td>@Html.DisplayFor(p => temp.customeraddress)</td>
+                    <td>@Html.DisplayFor(p => temp.customeremailid)</td>
+                    <td>@Html.DisplayFor(p => temp.customerphone)</td>
+                    <td>@Html.DisplayFor(p => temp.customercreditlimit)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

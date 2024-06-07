@@ -1,0 +1,12 @@
+Emp
+
+EmpSal
+ empid fk
+
+
+EmpSal esal =new ();
+dfasdff
+dfadfa
+
+
+Emp collection/single object Empsal => add empsal

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Custome_Authorization_Filter.props" />
+</Project>

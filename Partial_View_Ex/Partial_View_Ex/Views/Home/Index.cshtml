@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h2>Index Action Called From Home Controller!!</h2>
+    <hr />
+   <partial name="_Box"/>
+    <hr />
+    @await Html.PartialAsync("_Box")
+    <hr />
+    <partial name="_product" model="Model"/>
+    <hr />
+   @await Html.PartialAsync("_product")
+   
+</body>
+</html>

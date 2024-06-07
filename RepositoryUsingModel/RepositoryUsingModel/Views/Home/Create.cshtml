@@ -1,0 +1,46 @@
+﻿@model Customer
+@inject CustInterface xyz
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+   <div>
+       <h2>Create form</h2>
+       <h4>Count is:@xyz.getcount()</h4>
+       @using(Html.BeginForm())
+        {
+            <div>
+                @Html.LabelFor(p=>p.customername)
+                <div>@Html.EditorFor(p=>p.customername)</div>
+            </div>
+            <div>
+                @Html.LabelFor(p => p.customeraddress)
+                <div>@Html.EditorFor(p => p.customeraddress)</div>
+            </div>
+            <div>
+                @Html.LabelFor(p => p.customeremailid)
+                <div>@Html.EditorFor(p => p.customeremailid)</div>
+            </div>
+            <div>
+                @Html.LabelFor(p => p.customerphone)
+                <div>@Html.EditorFor(p => p.customerphone)</div>
+            </div>
+            <div>
+                @Html.LabelFor(p => p.customercreditlimit)
+                <div>@Html.EditorFor(p => p.customercreditlimit)</div>
+            </div>
+            <div>
+               <input type="submit" value="Create"/>
+            </div>
+        }
+    </div>
+</body>
+</html>

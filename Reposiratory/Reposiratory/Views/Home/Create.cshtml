@@ -1,0 +1,48 @@
+﻿@model Reposiratory.Models.Employee
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    <h2>Create Employee Form</h2>
+    <div>
+        @using(Html.BeginForm())
+        {
+            <div>
+                @Html.LabelFor(p=>p.EmpName)
+                <div>@Html.EditorFor(p=>p.EmpName)</div>
+            </div>
+            <div>
+                @Html.LabelFor(p => p.EmpAddress)
+                <div>@Html.EditorFor(p => p.EmpAddress)</div>
+            </div>
+            <div>
+                @Html.LabelFor(p => p.EmpEmailid)
+                <div>@Html.EditorFor(p => p.EmpEmailid)</div>
+            </div>
+            <div>
+                @Html.LabelFor(p => p.EmpMobileNo)
+                <div>@Html.EditorFor(p => p.EmpMobileNo)</div>
+            </div>
+            <div>
+                @Html.LabelFor(p => p.EmpDept)
+                <div>@Html.EditorFor(p => p.EmpDept)</div>
+            </div>
+            <div>
+                @Html.LabelFor(p => p.EmpSalary)
+                <div>@Html.EditorFor(p => p.EmpSalary)</div>
+            </div>
+            <div>
+                <input type="submit" value="create"/>
+            </div>
+        }
+    </div>
+</body>
+</html>

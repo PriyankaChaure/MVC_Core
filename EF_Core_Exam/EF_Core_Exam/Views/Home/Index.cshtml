@@ -1,0 +1,72 @@
+﻿@model IEnumerable<EF_Core_Exam.Models.abcmVM>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+
+</p>
+<table class="table" border="1">
+    <thead>
+        <tr>
+
+
+                <th>
+                    @Html.DisplayNameFor(model => model.SrNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.brandname)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalNoOfParts)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalPartAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinimumPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaximumPrice)
+            </th>
+            
+            
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SrNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem=>item.brandname)
+                    </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalNoOfParts)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalPartAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinimumPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaximumPrice)
+            </td>
+           
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

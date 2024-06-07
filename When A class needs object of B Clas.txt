@@ -1,0 +1,79 @@
+When A class needs object of B Class we call B as dependency for A Class.
+A -Depdent class
+B -Dependency
+
+IOC: 
+  Inversion of Control
+
+Tightly Coupled
+
+
+class Email
+{
+   sendEmail() {}
+}
+
+class Notification
+{
+    Email em;
+    Notification()
+    {
+       em =new Email();
+    }
+   GenNotification() {
+     ===
+     ===
+     em.sendEmail();
+    }
+}
+
+IOC:=> Introduce the Abstraction and let them depend using abstraction. 
+
+Dependency Injection:- Coding pattern/principal
+ - Instead of creating instances of dependencies inside a class create it out side a class in inject it using -
+1. constructor injection
+2. method injection
+3. property injection
+
+
+INotify
+{
+  send();
+}
+class SMS:INotify
+{
+   send() {SMS Code}
+}
+class Email:INotify
+{
+   send() { Email Code }
+}
+
+class Notification
+{
+    INotify nt;
+    Notification(INotify tnt)
+    {
+       nt =tnt;
+    }
+   GenNotification() {
+     ===
+     ===
+     nt.send();
+    }
+}
+
+Main=>
+Email em =new Email();
+Notification obj =new Notification(em);
+obj.GenNotification();
+
+SMS sm=new SMS();
+Notification obj =new Ntofication(sm);
+obj.GetNotifiation();
+
+Automation  
+  DIC => Dependency Injection Container.
+>> DIC
+>> IOC Container
+>> Injector

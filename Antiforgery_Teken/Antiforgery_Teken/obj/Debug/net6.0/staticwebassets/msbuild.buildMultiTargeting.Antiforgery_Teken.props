@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Antiforgery_Teken.props" />
+</Project>

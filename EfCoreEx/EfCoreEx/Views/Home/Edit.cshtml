@@ -1,0 +1,61 @@
+﻿@model Product
+<html>
+<head>
+    <title>Create form</title>
+    <title>Create form</title>
+    <script src="~/jqueryfiles/jquery/jquery.js"></script>
+    <script src="~/jqueryfiles/jquery-validate/jquery.validate.js"></script>
+    <script src="~/jqueryfiles/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+    <script src="~/bootstrapfiles/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="~/bootstrapfiles/bootstrap/js/bootstrap.js"></script>
+    <link href="~/bootstrapfiles/bootstrap/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <h2>Edit Form</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+    <div asp-validation-summary="All"></div>
+    <form class="form-check" asp-action="Edit" asp-controller="Home" method="post">
+        <div>
+            <input hidden asp-for="ProductId"/>
+        </div>
+        <div>
+            <label asp-for="Productname"></label>
+            <div>
+                <input asp-for="Productname" />
+                <span asp-validation-for="Productname"></span>
+            </div>
+        </div>
+        <div>
+            <label asp-for="MfgName"></label>
+            <div>
+                <input asp-for="MfgName" />
+                <span asp-validation-for="MfgName"></span>
+            </div>
+        </div>
+        <div>
+            <label asp-for="Price"></label>
+            <div>
+                <input asp-for="Price" />
+                <span asp-validation-for="Price"></span>
+            </div>
+        </div>
+        <div>
+            <label asp-for="Category"></label>
+            <div>
+                <select asp-for="CategoryId" asp-items="@ViewBag.categories">
+                    <option>Select category</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <input class="btn btn-outline-success" type="submit" value="Edit" />
+        </div>
+    </form>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Custome_ExceptionHandling_Ex.props" />
+</Project>

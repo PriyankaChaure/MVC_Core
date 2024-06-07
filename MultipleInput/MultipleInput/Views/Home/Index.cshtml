@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Emp>
+<div>
+    <h2>Employee Information</h2>
+    <a asp-action="Create" >Create</a>
+    <table border="1">
+        <tr>
+            <th>EmpId</th>
+            <th>EmpName</th>
+            <th>EmpAddress</th>
+            <th>EmailId</th>
+            <th>MobileNo</th>
+            <th>Skills</th>
+            <th>Actions</th>
+        </tr>
+        @foreach(var temp in Model)
+        {
+           <tr>
+               <td>@temp.EmpId</td>
+               <td>@temp.EmpName</td>
+                <td>@temp.Address</td>
+                <td>@temp.EmailId</td>
+                <td>@temp.PhoneNumber</td>
+              
+                <td>
+                    @{
+                        var sk = "";
+                    }
+                    @foreach (var temp1 in temp.EmpSkills)
+                    {
+                        sk += temp1.Skills.SkillName + ",";
+                    }
+                    @sk
+                  @*   @temp.EmpSkills.Count() *@
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@temp.EmpId">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@temp.EmpId">Delete</a>
+                    <a asp-action="Details" asp-route-id="@temp.EmpId">Details</a>
+                </td>
+           </tr>
+        }
+    </table>
+</div>

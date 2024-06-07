@@ -1,0 +1,62 @@
+﻿@model EmpSkillVM
+<h2>Create Form</h2>
+<form asp-action="Create" method="post">
+<div>
+    <label asp-for="EmpName"></label>
+    <div>
+        <input type="text" asp-for="EmpName"/>
+    </div>
+</div>
+<div>
+    <label asp-for="EmailId"></label>
+    <div>
+        <input type="text" asp-for="EmailId" />
+    </div>
+</div>
+<div>
+    <label asp-for="Address"></label>
+    <div>
+        <input type="text" asp-for="Address" />
+    </div>
+</div>
+<div>
+    <label asp-for="PhoneNumber"></label>
+    <div>
+        <input type="text" asp-for="PhoneNumber" />
+    </div>
+</div>
+
+<table>
+    <tr>
+        <td>Skill</td><td>Experience</td><td>Remark</td>
+    </tr>
+    <tr>
+        <td> <select  name="SkillId" asp-items="@ViewBag.Skill"></select></td>
+            <td><input type="text" name="Experience" asp-for="Experience" /></td>
+            <td><input type="text" name="Remark" asp-for="Remark" /></td>
+    </tr>
+        <tr>
+            <td> <select name="SkillId" asp-items="@ViewBag.Skill"></select></td>
+            <td><input type="text" name="Experience" asp-for="Experience" /></td>
+            <td><input type="text" name="Remark" asp-for="Remark" /></td>
+        </tr>
+        <tr>
+            <td> <select  name="SkillId" asp-items="@ViewBag.Skill"></select></td>
+            <td><input type="text" name="Experience" asp-for="Experience" /></td>
+            <td><input type="text" name="Remark" asp-for="Remark" /></td>
+        </tr>
+        <tr>
+            <td> <select  name="SkillId" asp-items="@ViewBag.Skill"></select></td>
+            <td><input type="text" name="Experience" asp-for="Experience" /></td>
+            <td><input type="text" name="Remark" asp-for="Remark" /></td>
+        </tr>
+        <tr>
+            <td> <select name="SkillId" asp-items="@ViewBag.Skill"></select></td>
+            <td><input type="text" name="Experience" asp-for="Experience" /></td>
+            <td><input type="text" name="Remark" asp-for="Remark" /></td>
+        </tr>
+</table>
+<div>
+    <input type="submit" value="create"/>
+</div>
+</form>

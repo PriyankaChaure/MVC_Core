@@ -1,0 +1,46 @@
+﻿@model Customer
+
+<html>
+    <head>
+        <title>Create form</title>
+    </head>
+    <body>
+        <form asp-action="Create" asp-controller="Home" method="post">
+        <div>
+            <label asp-for="CustomerName"></label>
+            <div>
+                <input asp-for="CustomerName"/>
+            </div>
+        </div>
+    <div>
+        <label asp-for="CustomerAddress"></label>
+        <div>
+            <textarea asp-for="CustomerAddress" cols="20"></textarea>
+        </div>
+    </div>
+
+    <div>
+        <label asp-for="CustomerEmailId"></label>
+        <div>
+
+        </div>
+        </div>
+        <div>
+            <label asp-for="CustomerCreditLimit"></label>
+            <div>
+
+            </div>
+            </div>
+
+            <div>
+                <label asp-for="CustomerCreditLimit"></label>
+                <div>
+                </div>
+               
+        <div>
+            <input type="submit" value="create"/>
+        </div>
+    </div>
+    </form>
+    </body>
+</html>
